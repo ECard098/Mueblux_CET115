@@ -18,7 +18,7 @@ PUBLIC = ROOT / "public"
 DATA = Path(os.environ.get("MUEBLUX_DATA", ROOT / "datos"))
 DATA.mkdir(exist_ok=True)
 DB = DATA / "tienda.sqlite"
-PIN = secrets.token_urlsafe(12)
+PIN = os.environ.get("MUEBLUX_PIN") or secrets.token_urlsafe(12)
 TEAM = [("HN21006","Stefany Lisseth Hernández Nunfio"),("AG19101","Cristian Rodolfo Aguirre Gonzales"),("QM18004","Javier Agustín Quijada Monterroza"),("VC18049","Jaime Eduardo Vigil Cardona")]
 # Precios en centavos. La variante amplia tiene un suplemento fijo por modelo.
 ITEMS = [
@@ -31,6 +31,7 @@ ZONES = {"Local":500,"Zona central":900,"Zona occidental":1400,"Zona oriental":1
 FINISH = ["Roble natural","Nogal","Blanco mate"]
 METHODS = ["Efectivo contra entrega","Transferencia","Tarjeta","Billetera digital"]
 STATES = ["Recibido","En preparación","En ruta","Entregado"]
+
 def init():
     with closing(sqlite3.connect(DB)) as c, c:
         c.executescript("""
@@ -179,9 +180,16 @@ class App(BaseHTTPRequestHandler):
 
 if __name__=="__main__":
     init()
-    port=int(os.environ.get("MUEBLUX_PORT","8765"))
-    httpd=ThreadingHTTPServer(("127.0.0.1",port),App)
-    url=f"http://127.0.0.1:{httpd.server_port}/"
-    print(f"MUEBLUX | {url}\nClave de gestión: {PIN}\nMantén esta ventana abierta durante la demostración.",flush=True)
-    if not os.environ.get("MUEBLUX_TEST"): webbrowser.open(url)
+    is_cloud = bool(os.environ.get("PORT"))
+    host = "0.0.0.0" if is_cloud else "127.0.0.1"
+    port = int(os.environ.get("PORT") or os.environ.get("MUEBLUX_PORT", "8765"))
+    
+    httpd = ThreadingHTTPServer((host, port), App)
+    url = f"http://{host}:{httpd.server_port}/"
+    print(f"MUEBLUX | {url}\nClave de gestión: {PIN}", flush=True)
+    
+    if not is_cloud and not os.environ.get("MUEBLUX_TEST"):
+        webbrowser.open(url)
+        
     httpd.serve_forever()
+    
