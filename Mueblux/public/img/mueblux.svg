@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 112" role="img" aria-label="Mueblux">
+<path fill="#9a6945" d="M123 10h9v75h-9V20L90 57l-5-5 38-42Z"/>
+<path fill="#292824" d="M45 10h9l37 43-6 5-31-37v64h-9z"/>
+<path fill="#a97951" d="M55 55h35v30H55z"/><path fill="#d6c7ae" d="M91 55h31v30H91z"/>
+<path stroke="#51392a" stroke-width="1" d="M55 68h35m-22-5h8m-8 12h8m23-13v11"/>
+<text x="88" y="104" text-anchor="middle" fill="#292824" font-family="Arial,sans-serif" font-weight="400" font-size="17" letter-spacing="4.4">MUEBL<tspan fill="#946747">UX</tspan></text></svg>

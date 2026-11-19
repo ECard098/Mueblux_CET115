@@ -1,0 +1,98 @@
+[
+  {
+    "id": "comedor-ronda",
+    "name": "Comedor Ronda",
+    "category": "Comedores",
+    "size": [
+      "100 × 100 × 75 cm",
+      "120 × 120 × 75 cm"
+    ],
+    "kit": 15500,
+    "assembled": 18000,
+    "extra": 3500,
+    "install": 2500,
+    "material": "Madera y melamina",
+    "img": "ronda",
+    "desc": "Mesa circular para cuatro personas. Su contorno redondo facilita el paso y reúne a todos al centro. Las sillas se muestran como referencia."
+  },
+  {
+    "id": "mesa-bahia",
+    "name": "Mesa de centro Bahía",
+    "category": "Mesas",
+    "size": [
+      "90 × 48 × 40 cm",
+      "110 × 55 × 42 cm"
+    ],
+    "kit": 5800,
+    "assembled": 7000,
+    "extra": 1500,
+    "install": 1000,
+    "material": "Madera y melamina",
+    "img": "bahia",
+    "desc": "Una mesa baja de contorno ovalado y base acanalada para acompañar el sofá."
+  },
+  {
+    "id": "mesa-luna",
+    "name": "Mesa de noche Luna",
+    "category": "Mesas",
+    "size": [
+      "40 × 35 × 48 cm",
+      "50 × 40 × 50 cm"
+    ],
+    "kit": 3900,
+    "assembled": 4900,
+    "extra": 1000,
+    "install": 1000,
+    "material": "Melamina",
+    "img": "luna",
+    "desc": "Un cajón para lo que necesitas a mano y una cubierta compacta para lámpara y libros."
+  },
+  {
+    "id": "zapatera-umbral",
+    "name": "Zapatera Umbral",
+    "category": "Organizadores",
+    "size": [
+      "80 × 30 × 85 cm",
+      "100 × 32 × 90 cm"
+    ],
+    "kit": 9400,
+    "assembled": 11400,
+    "extra": 2200,
+    "install": 1500,
+    "material": "Melamina",
+    "img": "umbral",
+    "desc": "Armario bajo de dos puertas que mantiene el calzado ordenado cerca de la entrada."
+  },
+  {
+    "id": "escritorio-roble",
+    "name": "Escritorio Horizonte",
+    "category": "Escritorios",
+    "size": [
+      "110 × 55 × 75 cm",
+      "130 × 60 × 75 cm"
+    ],
+    "kit": 5500,
+    "assembled": 6800,
+    "extra": 500,
+    "install": 1500,
+    "material": "Melamina",
+    "img": "horizonte",
+    "desc": "Superficie de trabajo con cajones laterales para organizar documentos y accesorios."
+  },
+  {
+    "id": "aparador-terra",
+    "name": "Aparador Terra",
+    "category": "Aparadores",
+    "size": [
+      "120 × 40 × 78 cm",
+      "150 × 45 × 82 cm"
+    ],
+    "kit": 10500,
+    "assembled": 12800,
+    "extra": 2800,
+    "install": 2000,
+    "material": "Madera y melamina",
+    "img": "terra",
+    "desc": "Tres puertas para guardar vajilla y mantelería, con espacio arriba para servir o decorar."
+  }
+]
